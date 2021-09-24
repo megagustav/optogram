@@ -1,6 +1,7 @@
 body {
 	background-image:url("../img/bg.jpg");
 	background-repeat: no-repeat;
-	background-position: center;
+	//background-position: center;
 	background-size: cover;
+	background-color: rgba(212, 105, 105, 1)
 }
