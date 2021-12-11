@@ -1,7 +1,53 @@
+@font-face {
+	font-family: "Vesterbro";
+	src: url("../typography/TRY_Vesterbro-LightItalic.otf");
+	font-style: italic;
+}
+
+/****************************************/
+
 body {
-	background-image:url("../img/bg.jpg");
-	background-repeat: no-repeat;
-	//background-position: center;
-	background-size: cover;
-	background-color: rgba(212, 105, 105, 1)
+	background-color: #F2F3EE;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+section {
+	margin: 5rem auto;
+	padding: 0 2rem;
+	//max-width: 800px;
+	width: 40rem;
+}
+
+h1 {
+	font-family: "Vesterbro";
+	font-style: italic;
+	text-transform: uppercase;
+	font-size: 10rem;
+	line-height: 1.08;
+}
+
+h1:first-of-type {
+	margin-top: 2.5rem;
+}
+
+h1 span {
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+
+h2 {
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 1.75rem;
+}
+
+section:first-child p {
+	color: #D71836;
+	position: relative;
+	top: -29.75rem;
+	left: 15rem;
+	max-width: 39ch;
+	line-height: 1.9;
+	font-size: 0.8rem;
 }
