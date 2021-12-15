@@ -70,7 +70,7 @@ header nav ul {
 	border-bottom: 1px solid #D71836;
 }
 
-header nav ul li {
+header nav ul li, header nav ul a {
 	list-style: none;
 	display: inline-block;
 	color: #D71836;
@@ -80,15 +80,15 @@ header nav ul li {
 	//padding: 0.2rem 0.3rem;
 }
 
-header nav ul li:hover {
+header nav ul a li:hover {
 	color: black;
 }
 
-header nav ul li:not(:first-child) {
+header nav ul a:not(:first-child) {
 	margin-left: 1.2rem;
 }
 
-header nav ul li:last-child {
+header nav ul li:not(:first-child) {
 	float: right;
 }
 
@@ -97,6 +97,10 @@ section, header, footer {
 	padding: 0 0.8rem;
 	max-width: calc(100vw - 1.6rem);
 	width: 40rem;
+}
+
+p {
+	margin: 1rem 0;
 }
 
 h1 {
@@ -134,7 +138,7 @@ h3 {
 section.intro p {
 	color: #D71836;
 	position: relative;
-	top: -11rem;
+	top: -12rem;
 	left: 7.5rem;
 	max-width: 37ch;
 	line-height: 1.3;
@@ -147,6 +151,22 @@ section iframe, img {
 	//height: auto;
 }
 
+.team {
+	margin-top: 5rem;
+}
+
+.teammember {
+	margin-bottom: 2rem;
+}
+
+.teammember .name {
+
+}
+
+.teammember .position {
+	font-size: 0.84rem;
+	margin-top: 0.3rem;
+}
 
 footer ul li {
 	list-style: none;
@@ -219,7 +239,7 @@ footer p {
 		}
 
 		section.intro p {
-			top: -21.51rem;
+			top: -22.51rem;
 			left: 15rem;
 			max-width: 39ch;
 			line-height: 1.9;
