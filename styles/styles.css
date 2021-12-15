@@ -6,18 +6,53 @@
 
 /****************************************/
 
+* {
+	margin-block-start: 0;
+	margin-block-end: 0;
+	padding-inline-start: 0;
+}
 
 body {
 	background-color: #F2F3EE;
 	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 	font-size: 16px;
+	margin: 0;
 }
 
-section {
+header nav ul {
+	//background: #eeefe9;
+	//border-radius: 0.4rem;
+	padding-bottom: 0.8rem;
+	border-bottom: 1px solid #D71836;
+}
+
+header nav ul li {
+	list-style: none;
+	display: inline-block;
+	color: #D71836;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 0.06rem;
+	//padding: 0.2rem 0.3rem;
+}
+
+header nav ul li:hover {
+	color: black;
+}
+
+header nav ul li:not(:first-child) {
+	margin-left: 1.2rem;
+}
+
+header nav ul li:last-child {
+	float: right;
+}
+
+section, header, footer {
 	margin: 5rem auto;
 	padding: 0 0.8rem;
-	max-width: 800px;
-	width: 100%;
+	max-width: calc(100vw - 1.6rem);
+	width: 40rem;
 }
 
 h1 {
@@ -44,23 +79,59 @@ h2 {
 	font-size: 1rem;
 }
 
-section:first-child p {
+section.intro p {
 	color: #D71836;
 	position: relative;
-	top: -15.2rem;
+	top: -11rem;
 	left: 7.5rem;
 	max-width: 37ch;
 	line-height: 1.3;
 	font-size: 0.6rem;
 }
 
+footer ul li {
+	list-style: none;
+	display: inline-block;
+	font-size: 0.7rem;
+}
+
+footer ul li:not(:first-child) {
+	margin-left: 1.2rem;
+}
+
+footer ul li:last-child {
+	float: right;
+	margin-top: 0.25rem;
+	text-transform: uppercase;
+	font-family: "Vesterbro";
+	font-style: italic;
+}
+
+footer ul li:last-child span {
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+
+footer p {
+	font-size: 0.7rem;
+	margin-top: 5rem;
+	color: #b3b2ac;
+	max-width: 50ch;
+}
+
+
 @media screen and (min-width: 800px) {
 
-		section {
+		section, nav ul {
 			margin: 5rem auto;
 			padding: 0 2rem;
 			max-width: 800px;
 			width: 40rem;
+		}
+
+		nav ul {
+			padding: 0;
 		}
 
 		h1 {
@@ -72,8 +143,8 @@ section:first-child p {
 			font-size: 1.75rem !important;
 		}
 
-		section:first-child p {
-			top: -29.75rem;
+		section.intro p {
+			top: -21.51rem;
 			left: 15rem;
 			max-width: 39ch;
 			line-height: 1.9;
