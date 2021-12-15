@@ -12,8 +12,19 @@
 	padding-inline-start: 0;
 }
 
+.admin {
+	position: fixed;
+	right: 0%;
+	top: 0%;
+	width: 30%;
+	float: left;
+}
+
 body {
 	background-color: #F2F3EE;
+	//background-image: url("../img/bg.png");
+	//background-repeat: repeat-y;
+	//background-size: cover;
 	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 	font-size: 16px;
 	margin: 0;
@@ -97,7 +108,7 @@ section.intro p {
 	font-size: 0.6rem;
 }
 
-section iframe {
+section iframe, img {
 	margin-top: 1rem;
 	max-width: 100%;
 	//height: auto;
@@ -138,11 +149,23 @@ footer p {
 
 @media screen and (min-width: 800px) {
 
+		section .slide {
+			min-height: 100vh;
+		}
+
 		section, nav ul {
 			margin: 5rem auto;
 			padding: 0 0.8rem;
 			max-width: 800px;
 			width: 40rem;
+		}
+
+		section iframe, img {
+			margin-top: 1rem;
+			margin-left: calc((50vw - 20rem) * -1);
+			min-width: 100vw;
+			max-width: 100vw;
+			//padding: 0 0.8rem;
 		}
 
 		nav ul {

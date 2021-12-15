@@ -35,7 +35,7 @@
 		</nav>
 	</header>
 
-	<section class="intro">
+	<section class="intro slide p1">
 		<h2>Optogram presents —<br>A Piet Mondrian Exhibition</h2>
 		<h1>From<br>Chaos<br><span>to<br>Order</span></h1>
 		<p>
@@ -45,17 +45,41 @@
 
 	<section>
 		<h3>First Room — Chaos</h3>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/pTIDrkRvCJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		<div class="slide p2">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/pTIDrkRvCJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+
+		<div class="slide p3">
+			<img src="img/slides/Slide%202.svg" />
+		</div>
+
+		<div class="slide p4">
+			<img src="img/slides/Slide%203.svg" />
+		</div>
+
+		<div class="slide p5">
+			<img src="img/slides/Slide%204.svg" />
+		</div>
+
+		<div class="slide p6">
+			<img src="img/slides/Slide%205.svg" />
+		</div>
+
 	</section>
 
 	<section>
 		<h3>Second Room — Transition</h3>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/pTIDrkRvCJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="slide p7">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/pTIDrkRvCJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
 	</section>
 
 	<section>
 		<h3>Third Room — Order</h3>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/pTIDrkRvCJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="slide p8">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/pTIDrkRvCJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
 	</section>
 
 	<footer>
@@ -66,5 +90,67 @@
 		</ul>
 		<p>This is a university project by students of the Digital and Interaction Design Master's Degree to celebrate Mondrian's 150th birthday. It has no affiliation to the Mondrian foundation and was not authorised or commissioned by it or its affiliates.</p>
 	</footer>
+
+	<div class="admin">
+		<button class="prev">PREVIOUS</button>
+		<button class="next">NEXT</button>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		let currSlide = 1;
+		const SLIDE_LENGTH = $('.slide').length;
+
+		function moveUp() {
+			currSlide = $(this).hasClass("next") ? ++currSlide : --currSlide;
+			if (currSlide < 1) {
+				currSlide = SLIDE_LENGTH;
+			}
+			if (currSlide > SLIDE_LENGTH) {
+				currSlide = 1;
+			}
+			$('html,body').animate({
+					scrollTop: $(`.p${currSlide}`).offset().top
+				},
+				1);
+		}
+
+		function moveDown() {
+			currSlide = $(this).hasClass("next") ? ++currSlide : ++currSlide;
+			if (currSlide < 1) {
+				currSlide = SLIDE_LENGTH;
+			}
+			if (currSlide > SLIDE_LENGTH) {
+				currSlide = 1;
+			}
+			$('html,body').animate({
+					scrollTop: $(`.p${currSlide}`).offset().top
+				},
+				1);
+		}
+
+		$(".prev, .next").on("click", moveUp);
+
+		document.onkeydown = checkKey;
+
+		function checkKey(e) {
+
+				e = e || window.event;
+
+				if (e.keyCode == '38') {
+						moveUp();
+				}
+				else if (e.keyCode == '40') {
+						moveDown();
+				}
+				else if (e.keyCode == '37') {
+					 moveUp();
+				}
+				else if (e.keyCode == '39') {
+					 moveDown();
+				}
+
+		}
+	</script>
 </body>
 </html>
