@@ -233,6 +233,11 @@ footer p {
 			min-height: 100vh;
 		}
 
+		video.overlap {
+		max-height: 100vh;
+		text-align: center;
+		}
+
 		nav ul {
 			margin: 5rem auto;
 			padding: 5rem 0.8rem;
