@@ -145,10 +145,26 @@ section.intro p {
 	font-size: 0.6rem;
 }
 
-section iframe, img {
+section iframe, img, video {
 	margin-top: 1rem;
 	max-width: 100%;
 	//height: auto;
+}
+
+.black {
+	background: #242424;
+}
+
+.red {
+	background: #D71836;
+}
+
+.yellow {
+	background: #FDD931;
+}
+
+.blue {
+	background: #5468AF;
 }
 
 .team {
@@ -203,21 +219,23 @@ footer p {
 @media screen and (min-width: 800px) {
 
 		section .slide {
+			margin-left: calc((50vw - 20rem) * -1);
+			//min-width: 100vw;
+			//max-width: 100vw;
+			width: 100vw;
 			min-height: 100vh;
 		}
 
 		section, nav ul {
-			margin: 5rem auto;
-			padding: 0 0.8rem;
+			padding: 5rem 0.8rem;
+			//padding: 0 0.8rem;
 			max-width: 800px;
 			width: 40rem;
 		}
 
-		section iframe, img {
-			margin-top: 1rem;
-			margin-left: calc((50vw - 20rem) * -1);
-			min-width: 100vw;
-			max-width: 100vw;
+		section iframe, img, video {
+			padding-top: 1rem;
+			width: 100vw;
 			//padding: 0 0.8rem;
 		}
 
