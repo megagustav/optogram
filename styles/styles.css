@@ -68,6 +68,8 @@ header nav ul {
 	//border-radius: 0.4rem;
 	padding-bottom: 0.8rem;
 	border-bottom: 1px solid #D71836;
+	margin: 3rem auto;
+	padding: 1rem 0;
 }
 
 header nav ul li, header nav ul a {
